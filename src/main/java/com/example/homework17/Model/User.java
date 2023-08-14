@@ -1,6 +1,7 @@
 package com.example.homework17.Model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class User {
     private String username;
 
   @Column(columnDefinition = " varchar(15) not null")
+  @Email
     private String email;
 
   @Column(columnDefinition = " int not null")
